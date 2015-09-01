@@ -11,7 +11,7 @@ public class Delivery {
 
     @Id @GeneratedValue
     @Column(name = "DELIVERY_ID")
-    private long id;
+    private Long id;
 
     @OneToOne(mappedBy = "delivery")
     private Order order;
@@ -22,11 +22,11 @@ public class Delivery {
     @Enumerated(EnumType.STRING)
     private DeliveryStatus status;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -15,7 +15,7 @@ public abstract class Item {
 
     @Id @GeneratedValue
     @Column(name = "ITEM_ID")
-    private long id;
+    private Long id;
 
     private String name;
 
@@ -26,11 +26,11 @@ public abstract class Item {
     @ManyToMany(mappedBy = "items")
     private List<Category> categories = new ArrayList<Category>();
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

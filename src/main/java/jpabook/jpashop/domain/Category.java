@@ -13,7 +13,7 @@ public class Category {
 
     @Id @GeneratedValue
     @Column(name = "CATEGORY_ID")
-    private long id;
+    private Long id;
 
     private String name;
 
@@ -30,11 +30,11 @@ public class Category {
     @OneToMany(mappedBy = "parent")
     private List<Category> child = new ArrayList<Category>();
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
